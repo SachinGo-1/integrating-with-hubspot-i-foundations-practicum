@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1= title
+
+    a(href="/") Return to the homepage
+
+    form(action="/update-cobj", method="POST")
+      div
+        label(for="name") Name
+        input(type="text", id="name", name="name", required=true)
+
+      div
+        label(for="species") Species
+        input(type="text", id="species", name="species", required=true)
+
+      div
+        label(for="watering_frequency") Watering Frequency
+        input(type="text", id="watering_frequency", name="watering_frequency", required=true)
+
+      button(type="submit") Create Plant
