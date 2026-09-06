@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    h1= title
+
+    a(href="/update-cobj") Add to this table
+
+    table
+      thead
+        tr
+          th Name
+          th Species
+          th Watering Frequency
+
+      tbody
+        each plant in data
+          tr
+            td= plant.properties.name
+            td= plant.properties.species
+            td= plant.properties.watering_frequency
